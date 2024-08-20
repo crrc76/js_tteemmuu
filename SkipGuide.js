@@ -2,7 +2,7 @@
 // @name         快速跳过检测
 // @namespace    http://tampermonkey.net/
 // @version      1.0
-// @description  在页面上加一个快速跳过的按钮，点击后程序每 1 秒检测一次页面的元素，如果发现指定 XPath 元素集合里的任一元素，等待 0.5 秒后点击检测到的元素。直到未发现元素集合里的任何元素后停止。
+// @description  在页面上加一个快速跳过的按钮，点击后程序每 1 秒检测一次页面的元素，如果发现指定 XPath 元素集合里的任一元素，等待 0.5 秒后点击检测到的元素。直到未发现元素集合里的任何元素后停止。是不是很爽
 // @match        https://seller.kuajingmaihuo.com/*
 // @grant        none
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=tampermonkey.net
