@@ -13,13 +13,17 @@
 
     async function main() {
         console.log('进入页面,10s后开始执行');
-        await new Promise(resolve => setTimeout(resolve, 10000)); // Wait for 10 seconds
+        await sleep(10000); // wait for 10 s
 
         let lenBoxSelects = 2;
+        let boxSelects = [];  // Initialize boxSelects outside the loop
         while (lenBoxSelects > 1) {
+            await sleep(1000);
+            console.log('等待1s');
             try {
-                let boxSelects = document.querySelectorAll("input.CBX_input_5-111-0");
+                boxSelects = document.querySelectorAll("input.CBX_input_5-111-0");  // Assign boxSelects here
                 lenBoxSelects = boxSelects.length;
+                console.log(`进入页面,lenBoxSelects:${lenBoxSelects}`);
             } catch (error) {
                 console.log('列表为空，未发现待执行任务');
                 let t0 = 1;
