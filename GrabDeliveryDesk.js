@@ -45,7 +45,11 @@ async function main() {
 
                 if (statusElementBatchAddToDesk.includes('disabled')) {
                     console.log('等待5分钟再重头执行');
-                    await new Promise(resolve => setTimeout(resolve, 5 * 60 * 1000)); // Wait for 5 minutes
+                    await new Promise(resolve => setTimeout(resolve, 1 * 60 * 1000)); // Wait for 5 minutes
+                    lenBoxSelects = 2;
+                    const requre = await waitForElements("//button/span[text()='查询']");
+                    await clickElement(requre.snapshotItem(0));
+                    await new Promise(resolve => setTimeout(resolve, 1000)); // Wait for 1 second
                     lenBoxSelects = 2;
                     continue;
                 } else {
@@ -60,6 +64,10 @@ async function main() {
 
             } catch (error) {
                 console.error('发生错误，继续下一个循环:', error);
+                const requre = await waitForElements("//button/span[text()='查询']");
+                await clickElement(requre.snapshotItem(0));
+                await new Promise(resolve => setTimeout(resolve, 1000)); // Wait for 1 second
+                lenBoxSelects = 2;
                 continue; // 直接继续下一个循环
             }
         } else {
