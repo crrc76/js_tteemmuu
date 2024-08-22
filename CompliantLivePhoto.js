@@ -4,7 +4,7 @@
 // @version      1.0
 // @description  Automate the task of uploading images based on tags in the browser
 // @author       Your Name
-// @match        *://*/*  // Adjust this to match the specific site where you want to run the script
+// @match        https://agentseller.temu.com/govern/compliant-live-photos?region=1
 // @grant        none
 // ==/UserScript==
 
